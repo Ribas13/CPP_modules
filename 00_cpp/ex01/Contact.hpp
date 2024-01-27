@@ -1,23 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/22 15:05:59 by diosanto          #+#    #+#             */
+/*   Updated: 2024/01/22 15:06:00 by diosanto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
-
-class	Contact
+class Contact
 {
 	private:
-
+		int			index;
+		std::string firstName;
+		std::string lastName;
+		std::string nickname;
+		std::string phoneNumber;
+		std::string darkestSecret;
 	public:
-		Contact(void);
-		~Contact(void);
-		int			i;
-		std::string	first_name;
-		std::string	last_name;
-		std::string	nickname;
-		int			phone_number;
-		std::string	darkest_secret;
+		Contact();
+		~Contact();
+		int			getIndex(void);
+		std::string	getFirstName(void);
+		std::string	getLastName(void);
+		std::string	getNickname(void);
+		void		setIndex(int i);
+		void		CreateContact(int id, std::string first, std::string last, std::string nick, std::string number, std::string secret);
+		void		DisplayContact(void);
 };
 
 #endif

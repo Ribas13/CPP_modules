@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/12 14:19:25 by diosanto          #+#    #+#              #
-#    Updated: 2024/01/21 19:39:08 by diosanto         ###   ########.fr        #
+#    Created: 2024/01/23 17:31:12 by diosanto          #+#    #+#              #
+#    Updated: 2024/01/23 17:31:37 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	PhoneBook
+NAME		=	War
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
-SRCS		=	PhoneBook.cpp 		\
-				Contact.cpp 		\
-				main.cpp
+SRCS		=	main.cpp		\
+				Zombie.cpp		\
+				zombieHorde.cpp	\
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
