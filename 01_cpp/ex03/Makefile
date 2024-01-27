@@ -6,18 +6,19 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 17:31:12 by diosanto          #+#    #+#              #
-#    Updated: 2024/01/23 17:31:37 by diosanto         ###   ########.fr        #
+#    Updated: 2024/01/27 22:13:10 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	War
+NAME		=	Violence
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
 SRCS		=	main.cpp		\
-				Zombie.cpp		\
-				zombieHorde.cpp	\
+				Weapon.cpp		\
+				HumanA.cpp		\
+				HumanB.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
