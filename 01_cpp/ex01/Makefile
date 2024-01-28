@@ -6,7 +6,7 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 16:39:20 by diosanto          #+#    #+#              #
-#    Updated: 2024/01/22 16:39:48 by diosanto         ###   ########.fr        #
+#    Updated: 2024/01/27 22:29:44 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-noleaks: re
-	valgrind ./$(NAME)
-
-noleaksfull: re
-	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
