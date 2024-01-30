@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:10:00 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/27 23:14:01 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/01/30 13:29:54 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,20 @@
 
 #include "Harl.hpp"
 
+int main(void)
+{
+	Harl harl;
+	std::string arr[4];
+
+	arr[0] = "debug";
+	arr[1] = "info";
+	arr[2] = "warning";
+	arr[3] = "error";
+	
+	for (int i = 0; i < 4; i++)
+	{
+		harl.complain(arr[i]);
+		std::cout << std::endl;
+	}
+	return (0);
+}
