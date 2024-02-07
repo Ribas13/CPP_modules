@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:18 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/30 14:41:00 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:57:16 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Fixed::Fixed(void)
 {
+	
 	std::cout << "Default constructor called" << std::endl;
 }
 
