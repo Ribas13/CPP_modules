@@ -3,7 +3,6 @@
 
 int	main(int ac, char **av)
 {
-
 	if (ac == 1)
 		std::cout << "* LOUND AND UBEARABLE FEEDBACK NOISES *" << std::endl;
 	else

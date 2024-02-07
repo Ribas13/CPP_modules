@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/30 13:49:14 by diosanto          #+#    #+#             */
+/*   Updated: 2024/01/30 14:35:55 by diosanto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FIXED_HPP
+#define FIXED_HPP
+
+#include <iomanip>
+#include <iostream>
+
+class Fixed
+{
+	private:
+		int fixedPointNumber;
+		static const int fractionalBits = 8;
+	public:
+		Fixed(void); //Initializes the fixed point number value to 0
+		~Fixed(void); //destructor
+		Fixed(const Fixed &src); //copy constructor
+		Fixed &operator=(const Fixed &src); //overload of the assignation operator
+		int getRawBits(void) const; //returns the value of the fixed point value
+		void setRawBits(int const raw); //sets the raw value of the fixed point number
+};
+
+#endif
