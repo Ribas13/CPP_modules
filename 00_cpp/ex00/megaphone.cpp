@@ -4,7 +4,7 @@
 int	main(int ac, char **av)
 {
 	if (ac == 1)
-		std::cout << "* LOUND AND UBEARABLE FEEDBACK NOISES *" << std::endl;
+		std::cout << "* LOUND AND UBEARABLE FEEDBACK NOISES *";
 	else
 	{
 		char	c;
@@ -12,9 +12,9 @@ int	main(int ac, char **av)
 		{
 			for (int j = 0; av[i][j]; j++)
 			{
-				c = av[i][j];
-				if (av[i][j] >= 'a' && av[i][j] <= 'z')
-					c -= 32;
+				c = toupper(av[i][j]);
+				/*if (av[i][j] >= 'a' && av[i][j] <= 'z')
+					c -= 32; */
 				std::cout << c;
 			}
 		}

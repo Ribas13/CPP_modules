@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:39:19 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/21 19:43:21 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/03/22 13:20:14 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	main(void)
 {
 	PhoneBook	phoneBook;
 	std::string	cmd;
+	int			index;
 
 	while (1)
 	{
@@ -65,7 +66,9 @@ int	main(void)
 		if (!ft_strcmp(cmd, "ADD"))
 			phoneBook.AddContact();
 		else if (!ft_strcmp(cmd, "SEARCH"))
-			phoneBook.SearchContact();
+		{
+			phoneBook.SearchContact(read_input("Contact index: "));
+		}
 		else if (!ft_strcmp(cmd, "EXIT"))
 			break ;
 		else
