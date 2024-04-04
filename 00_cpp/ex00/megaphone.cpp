@@ -1,22 +1,28 @@
 #include <ostream>
 #include <iostream>
 
+std::string toUpperCase(const std::string &str) {
+	std::string res = str;
+	for (size_t i = 0; i < res.size(); i++) {
+		res[i] = std::toupper(res[i]);
+	}
+	return res;
+}
+
 int	main(int ac, char **av)
 {
 	if (ac == 1)
 		std::cout << "* LOUND AND UBEARABLE FEEDBACK NOISES *";
 	else
 	{
-		char	c;
-		for (int i = 1; av[i]; i++)
+		std::string upper_str;
+		for (int i = 1; i < ac; i++)
 		{
-			for (int j = 0; av[i][j]; j++)
-			{
-				c = toupper(av[i][j]);
-				/*if (av[i][j] >= 'a' && av[i][j] <= 'z')
-					c -= 32; */
-				std::cout << c;
-			}
+			upper_str = toUpperCase(av[i]);
+			std::cout << upper_str;
+			if (i >= ac)
+				break ;
+			std::cout << " ";
 		}
 	}
 	std::cout << std::endl;

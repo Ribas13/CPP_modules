@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:06:10 by diosanto          #+#    #+#             */
-/*   Updated: 2024/03/22 13:19:51 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/04 19:12:28 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 std::string read_input(std::string input);
 
-class PhoneBook
-{
+class PhoneBook {
 	private:
 		Contact Contacts[8];
 		void	shiftDown(void);
@@ -29,8 +28,9 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		void	AddContact();
-		void	SearchContact(std::string i);
+		void	SearchContact();
 		int		get_size();
+		void	lookup_contact(std::string index);
 };
 
 #endif

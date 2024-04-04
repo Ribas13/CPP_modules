@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:05:59 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/22 15:06:00 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/04 19:12:05 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 #include <iomanip>
 #include <string>
 
-class Contact
-{
+class Contact {
 	private:
 		int			index;
 		std::string firstName;
