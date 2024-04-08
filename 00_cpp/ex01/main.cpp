@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:39:19 by diosanto          #+#    #+#             */
-/*   Updated: 2024/04/04 19:11:37 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:52:11 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,6 @@ int	main(void) {
 		}
 		else if (cmd == "EXIT")
 			break ;
-		else if (cmd == "RETRY")
-		{
-			;	
-		}
 		else
 			std::cout << "command not found" << std::endl;
 	}

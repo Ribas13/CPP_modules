@@ -6,13 +6,13 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 14:19:25 by diosanto          #+#    #+#              #
-#    Updated: 2024/01/21 19:39:08 by diosanto         ###   ########.fr        #
+#    Updated: 2024/04/08 16:51:00 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	PhoneBook
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
+CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
 SRCS		=	PhoneBook.cpp 		\
@@ -24,7 +24,7 @@ OBJS		=	$(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
@@ -33,9 +33,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-noleaks: re
-	valgrind ./$(NAME)
-
-noleaksfull: re
-	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)

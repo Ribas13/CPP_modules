@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:05:16 by diosanto          #+#    #+#             */
-/*   Updated: 2024/04/08 15:02:53 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:51:41 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,20 @@ int		PhoneBook::get_size() {
 void	PhoneBook::lookup_contact(std::string index) {
 	try {
 		int i = std::stoi(index);
-		if (i < 0 || i >= get_size()) {
-			std::cout << "Index must be between 0 and " << get_size() - 1 << std::endl;
+		if (i >= 0 && i <= get_size() - 1) {
+			this->Contacts[i].DisplayContact();
+		}
+		else {
+			std::cout << "Invalid index" << std::endl;
 			lookup_contact(read_input("Enter search index: "));
 		}
-		this->Contacts[i].DisplayContact();
+		return ;
 	} catch (std::invalid_argument &e) {
-		std::cout << "Invalid index (must be a digit)" << std::endl;
+		std::cout << "Invalid index" << std::endl;
 		lookup_contact(read_input("Enter search index: "));
 		return ;
 	} catch (std::out_of_range &e) {
-		std::cout << "Invalid index (out of range)" << std::endl;
+		std::cout << "Invalid index" << std::endl;
 		lookup_contact(read_input("Enter search index: "));
 		return ;
 	}
