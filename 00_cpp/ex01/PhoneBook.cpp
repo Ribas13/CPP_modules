@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:05:16 by diosanto          #+#    #+#             */
-/*   Updated: 2024/04/04 19:12:23 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:02:53 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ void	PhoneBook::lookup_contact(std::string index) {
 		this->Contacts[i].DisplayContact();
 	} catch (std::invalid_argument &e) {
 		std::cout << "Invalid index (must be a digit)" << std::endl;
+		lookup_contact(read_input("Enter search index: "));
+		return ;
+	} catch (std::out_of_range &e) {
+		std::cout << "Invalid index (out of range)" << std::endl;
 		lookup_contact(read_input("Enter search index: "));
 		return ;
 	}
