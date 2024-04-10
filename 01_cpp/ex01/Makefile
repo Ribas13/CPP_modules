@@ -6,11 +6,11 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 16:39:20 by diosanto          #+#    #+#              #
-#    Updated: 2024/04/09 12:03:20 by diosanto         ###   ########.fr        #
+#    Updated: 2024/04/10 15:02:13 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	zombieHorde
+NAME		=	Zombies
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
