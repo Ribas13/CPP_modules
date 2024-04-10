@@ -6,50 +6,46 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:28:58 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:39 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/09 15:05:46 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 
 int	replace_text(std::string filename, std::string s1, std::string s2)
 {
-	std::ifstream file(filename);
+	std::ifstream file(filename.c_str());
 	std::string line;
 	
+	if (s1.empty() || s2.empty())
+	{
+		std::cout << "Empty arguments!" << std::endl;
+		return (1);
+	}
 	if (!file.is_open())
 	{
 		std::cout << "Error opening file" << std::endl;
 		return (1);
 	}
-	std::ofstream newfile(filename + "_replaced");
+	std::ofstream newfile((filename + ".replace").c_str());
 	if (!newfile)
 	{
-		std::cout << "Error creating new file" << std::endl;
+		std::cout << "Error creating .replace file" << std::endl;
 		return (1);
 	}
 	while (std::getline(file, line))
 	{
-		for (int i = 0; i < line.length(); i++)
+		size_t	i = line.find(s1);
+		while (i != std::string::npos)
 		{
-			if (line[i] == s1[0])
-			{
-				int j = 0;
-				while (line[i + j] == s1[j])
-				{
-					j++;
-					if (j == s1.length())
-					{
-						newfile << s2;
-						i += j;
-						j = 0;
-					}
-				}
-			}
-			newfile << line[i];
+			line.erase(i, s1.length());
+			line.insert(i, s2);
+			i = line.find(s1, i + s2.length());
 		}
+		newfile << line;
 		newfile << std::endl;
 	}
 	file.close();

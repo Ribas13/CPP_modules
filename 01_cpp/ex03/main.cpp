@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:31:44 by diosanto          #+#    #+#             */
-/*   Updated: 2024/01/27 22:24:05 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:49:44 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(void)
 {
 	{
-		Weapon pistol = Weapon("pistol");
+		Weapon pistol = Weapon("pistola");
 
 		HumanA bob("Bob", pistol);
 		bob.attack();
@@ -25,12 +25,13 @@ int main(void)
 		bob.attack();
 	}
 	{
-		//Weapon icecream = Weapon("icecream");
+		Weapon icecream = Weapon("icecream");
 
 		HumanB jonny("Jonny");
-		//jonny.setWeapon(icecream);
+		jonny.setWeapon(icecream);
 		jonny.attack();
-		//icecream.setType("popsicle");
+		icecream.setType("popsicle");
 		jonny.attack();
 	}
+	return (0);
 }

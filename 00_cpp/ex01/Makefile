@@ -6,12 +6,12 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 14:19:25 by diosanto          #+#    #+#              #
-#    Updated: 2024/04/08 16:51:00 by diosanto         ###   ########.fr        #
+#    Updated: 2024/04/08 18:08:05 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	PhoneBook
-CC			=	c++
+CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
@@ -24,7 +24,7 @@ OBJS		=	$(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
