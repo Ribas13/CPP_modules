@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:14 by diosanto          #+#    #+#             */
-/*   Updated: 2024/02/07 12:32:33 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:32:04 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Fixed
 {
 	private:
 		int fixedPointNumber;
-		static int fractionalBits;
+		static const int fractionalBits = 8;
 	public:
 		Fixed(void);
 		~Fixed(void);

@@ -6,13 +6,11 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:18 by diosanto          #+#    #+#             */
-/*   Updated: 2024/02/07 12:32:23 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:32:09 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-int Fixed::fractionalBits = 8;
 
 Fixed::Fixed(void)
 {

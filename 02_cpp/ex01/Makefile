@@ -6,13 +6,13 @@
 #    By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 13:49:07 by diosanto          #+#    #+#              #
-#    Updated: 2024/01/30 14:30:19 by diosanto         ###   ########.fr        #
+#    Updated: 2024/04/13 16:44:56 by diosanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	Fixed
-CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
+CXX			=	c++
+CXXFLAGS		=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
 SRCS		=	main.cpp		\
@@ -23,7 +23,7 @@ OBJS		=	$(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)

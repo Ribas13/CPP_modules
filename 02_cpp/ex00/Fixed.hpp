@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:14 by diosanto          #+#    #+#             */
-/*   Updated: 2024/02/07 11:38:25 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:32:09 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Fixed
 		int fixedPointNumber;
 		static const int fractionalBits = 8;
 	public:
-		Fixed(void);
-		~Fixed(void);
-		Fixed(const Fixed &src);
-		Fixed &operator=(const Fixed &src);
+		Fixed(void); //constructor
+		~Fixed(void); //destructor
+		Fixed(const Fixed &src); //copy constructor
+		Fixed &operator=(const Fixed &src); //copy assignment operator
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };
