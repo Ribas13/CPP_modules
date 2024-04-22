@@ -5,10 +5,10 @@ int	main(void) {
 	ClapTrap Ribas("Ribas");
 
 	Ribas.attack("joao");
-	Ribas.takeDamage(0);
-	std::cout << "hp " << Ribas.getHP() << std::endl;
+	joao.takeDamage(0);
+	//std::cout << "hp " << Ribas.getHP() << std::endl;
 	Ribas.beRepaired(10);
-	std::cout << "hp " << Ribas.getHP() << std::endl;
-	Ribas.getEnergy();
+	//std::cout << "hp " << Ribas.getHP() << std::endl;
+	//Ribas.getEnergy();
 	return (0);
 }

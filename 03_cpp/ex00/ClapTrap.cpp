@@ -2,16 +2,16 @@
 
 ClapTrap::ClapTrap() {
 	std::cout << "ClapTrap Constructor called" << std::endl;
-	this->AttackDamage = 0;
 	this->HitPoints = 10;
 	this->EnergyPoints = 10;
+	this->AttackDamage = 0;
 }
 
 ClapTrap::ClapTrap(const std::string newName) {
 	this->_name = newName;
-	this->AttackDamage = 0;
 	this->HitPoints = 10;
 	this->EnergyPoints = 10;
+	this->AttackDamage = 0;
 	std::cout << "ClapTrap constructor called for " << _name << std::endl;
 }
 
@@ -52,11 +52,11 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	this->EnergyPoints -= 1;
 }
 
-int	ClapTrap::getHP() {
+/* int	ClapTrap::getHP() {
 	return this->HitPoints;
 }
 
 int	ClapTrap::getEnergy() {
 	std::cout << "ClapTrap " << _name << " has " << EnergyPoints << " energy points!" << std::endl;
 	return this->EnergyPoints;
-}
+} */

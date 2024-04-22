@@ -20,8 +20,8 @@ class ClapTrap
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		int	getHP(void);
-		int	getEnergy(void);
+		//int	getHP(void);
+		//int	getEnergy(void);
 };
 
 #endif
