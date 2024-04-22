@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:18 by diosanto          #+#    #+#             */
-/*   Updated: 2024/04/16 17:32:09 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:12:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Fixed::~Fixed(void)
 Fixed::Fixed(const Fixed &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src;
+	this->setRawBits(src.getRawBits());
 }
 
 Fixed::Fixed(const int value)
@@ -48,14 +48,14 @@ Fixed &Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->fixedPointNumber = src.getRawBits();
+		this->setRawBits(src.getRawBits());
 	return (*this);
 }
 
 //returns the value of the fixed point value
 int Fixed::getRawBits(void) const
 {
-	return (this->fixedPointNumber);
+	return (fixedPointNumber);
 }
 
 //sets the raw value of the fixed point number
@@ -66,12 +66,12 @@ void Fixed::setRawBits(int const raw)
 
 int Fixed::toInt(void) const
 {
-	return (this->getRawBits() >> fractionalBits);
+	return this->getRawBits() >> fractionalBits;
 }
 
 float Fixed::toFloat(void) const
 {
-	return (this->getRawBits() / (1 << fractionalBits));
+	return (float)this->getRawBits() / (1 << fractionalBits);
 }
 
 std::ostream &operator<<(std::ostream &objstream, const Fixed &fixed)

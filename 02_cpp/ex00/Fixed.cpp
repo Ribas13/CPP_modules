@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:18 by diosanto          #+#    #+#             */
-/*   Updated: 2024/02/07 11:57:16 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:14:07 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed(void)
 {
-	
+	this->fixedPointNumber = 0;
 	std::cout << "Default constructor called" << std::endl;
 }
 
@@ -28,7 +28,7 @@ Fixed::~Fixed(void)
 Fixed::Fixed(const Fixed &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src;
+	this->setRawBits(src.getRawBits());
 }
 
 //overload of the assignation operator

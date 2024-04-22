@@ -6,13 +6,11 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:49:10 by diosanto          #+#    #+#             */
-/*   Updated: 2024/02/07 12:28:31 by diosanto         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:10:36 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-#include <iostream>
 
 int main(void)
 {
