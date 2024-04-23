@@ -6,7 +6,7 @@
 class ClapTrap
 {
 	private:
-		std::string _name;
+		std::string name;
 		int			HitPoints;
 		int			EnergyPoints;
 		int			AttackDamage;
