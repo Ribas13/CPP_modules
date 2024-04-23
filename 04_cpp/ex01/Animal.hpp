@@ -3,6 +3,11 @@
 
 #include <iostream>
 
+/* Class destructor need to be virtual in order to ensure
+	the correct destructor is called when an object of a
+	derived class is deleted through a pointer to the base
+	class */
+
 class Animal
 {
 	protected:

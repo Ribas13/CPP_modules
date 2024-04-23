@@ -1,8 +1,7 @@
 #include "Animal.hpp"
 
-Animal::Animal() {
+Animal::Animal() : type("Animal") {
 	std::cout << "Animal constructor called" << std::endl;
-	this->type = "Animal";
 }
 
 Animal::Animal(Animal const &src) {

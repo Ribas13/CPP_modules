@@ -4,11 +4,12 @@ CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
 
 SRCS		=	main.cpp		\
-				Animal.cpp		\
+				AAnimal.cpp		\
 				Cat.cpp			\
 				Dog.cpp			\
 				WrongAnimal.cpp	\
-				WrongCat.cpp
+				WrongCat.cpp	\
+				Brain.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
