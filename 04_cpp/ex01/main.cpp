@@ -35,8 +35,9 @@ int main(void) {
 		delete cat;
 		delete another;
 	}
-	//testing for deep copy
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << "testing for deep copy: " << std::endl;
+	std::cout << "if the copy is shallow, dog test and tmp will use the same brain and the brain will get deleted with tmp at the end of the scope" << std::endl;
+	std::cout << std::endl;
 	Dog test;
 	{
 		Dog tmp = test;

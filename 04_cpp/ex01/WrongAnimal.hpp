@@ -11,11 +11,11 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(WrongAnimal const &src);
 		WrongAnimal& operator=(WrongAnimal const &src);
-		virtual ~WrongAnimal();
+		~WrongAnimal();
 
 		std::string getType() const;
 		void setType(const std::string& newType);
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif
