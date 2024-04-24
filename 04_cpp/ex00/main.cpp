@@ -6,7 +6,7 @@ int main(void) {
 	const Animal* genAnimal = new Animal();
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
-	const WrongAnimal* weird_animal = new WrongCat(); //Change to WrongAnimal to get the correct message
+	const WrongAnimal* weird_animal = new WrongAnimal();
 	const WrongCat* weird_cat = new WrongCat();
 
 	std::cout << std::endl << "Types: " << std::endl;
