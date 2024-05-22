@@ -1,4 +1,4 @@
-NAME		=	convert
+NAME		=	converter
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f
@@ -17,6 +17,5 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	$(RM) *_shrubbery
 
 re: fclean all

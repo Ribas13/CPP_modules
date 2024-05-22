@@ -22,7 +22,7 @@ class ScalarConverter {
 		static void converter(float value);
 		static void converterType(std::string value);
 		static void displayLimits(std::string Flimit, std::string Dlimit);
-		static std::string getType(std::string value);
+		static std::string getType(const std::string &input);
 		static int checkChar(std::string value);
 		static int checkInt(std::string value);
 		static int checkFloat(std::string value);
