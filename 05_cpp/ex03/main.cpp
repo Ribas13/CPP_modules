@@ -34,12 +34,29 @@ int main(void) {
 	} */
 	{
 		try {
+			std::cout << "------------------------\nFirst test - Wrong form name\n------------------------" << std::endl;
 			Intern someRandomIntern;
 			Bureaucrat diogo("diogo", 1);
 			AForm *form;
 
 			form = someRandomIntern.makeForm("rotomy request", "Bender");
 			diogo.signForm(*form);
+			diogo.executeForm(*form);
+		}
+		catch (std::exception &e) {
+			std::cerr << "Caught an exception: " << e.what() << std::endl;
+		}
+	}
+	{
+		try {
+			std::cout << "------------------------\nSecond test - Correct form name\n------------------------" << std::endl;
+			Intern someRandomIntern;
+			Bureaucrat diogo("diogo", 1);
+			AForm *form;
+
+			form = someRandomIntern.makeForm("robotomy request", "Bender");
+			diogo.signForm(*form);
+			diogo.executeForm(*form);
 		}
 		catch (std::exception &e) {
 			std::cerr << "Caught an exception: " << e.what() << std::endl;
