@@ -9,7 +9,7 @@ int main() {
 		const int value = rand();
 		n[i] = value;
 	}
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) { //TODO hello
 		std::cout << "n[" << i << "]: " << n[i] << std::endl;
 	}
 	try {
