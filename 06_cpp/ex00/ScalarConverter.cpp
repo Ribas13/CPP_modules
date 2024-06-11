@@ -20,7 +20,7 @@ void ScalarConverter::converter(int value) {
 	if (value < 32 || value > 126)
 		std::cout << "non displayable" << std::endl;
 	else
-		std::cout << "" << static_cast<char>(value) << "'" << std::endl;
+		std::cout << "'" << static_cast<char>(value) << "'" << std::endl;
 	std::cout << "int: " << value << std::endl;
 	std::cout << "float: " << static_cast<float>(value) << ".0f" << std::endl;
 	std::cout << "double: " << static_cast<double>(value) << ".0" << std::endl;
