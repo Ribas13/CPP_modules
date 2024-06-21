@@ -1,11 +1,13 @@
 #include "Span.hpp"
 
-Span::Span() : _N(0) {
+Span::Span() {
 	//std::cout << "Span default constructor" << std::endl;
+	_N = 0;
 }
 
-Span::Span(unsigned int N) : _N(N) {
+Span::Span(unsigned int N) {
 	//std::cout << "Span with parameter constructor" << std::endl;
+	_N = N;
 }
 
 Span::Span(Span const & src) {
