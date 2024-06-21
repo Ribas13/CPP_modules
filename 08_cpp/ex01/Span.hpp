@@ -5,6 +5,7 @@
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
+#include <limits>
 
 class Span {
 	private:
@@ -25,11 +26,11 @@ class Span {
 		void addRange(int start, int end);
 
 		//Exceptions
-		class noSpanFound : public std::exception {
+		class NoSpanFound : public std::exception {
 			public:
 				virtual const char* what() const throw();
 		};
-		class outOfRangeException : public std::exception {
+		class OutOfRangeException : public std::exception {
 			public:
 				virtual const char* what() const throw();
 		};
