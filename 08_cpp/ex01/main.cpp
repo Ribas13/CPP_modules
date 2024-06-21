@@ -2,14 +2,6 @@
 #include <ctime>
 #include <cstdlib>
 
-/* Test with:
-
-	- Out of range
-	- 0 size
-	TODO: - element count too small to find a span
-	TODO: - long and short span with 2 numbers
- */
-
 int main() {
 	srand((time(0)));
 	try {
