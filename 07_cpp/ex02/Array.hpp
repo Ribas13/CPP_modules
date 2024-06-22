@@ -14,12 +14,8 @@ class Array {
 			_arr = new T[n];
 			_size = n;
 		}
-		Array(Array const & src) {
-			if (this != &src) {
-				_arr = NULL;
-				_size = 0;
-				*this = src;
-			}
+		Array(Array const & src) : _arr(NULL), _size(0) {
+			*this = src;
 		}
 		Array & operator=(Array const &src) {
 			if (this != &src) {
