@@ -1,4 +1,4 @@
-NAME		=	Template
+NAME		=	Iter
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
 RM			=	rm -f

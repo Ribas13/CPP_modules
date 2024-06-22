@@ -10,9 +10,16 @@ class Array {
 		unsigned int _size;
 	public:
 		Array(): _arr(NULL), _size(0) {}
-		Array(unsigned int n) : _arr(new T[n]), _size(n) {}
-		Array(Array const & src) : _arr(NULL), _size(0) {
-			*this = src;
+		Array(unsigned int n) {
+			_arr = new T[n];
+			_size = n;
+		}
+		Array(Array const & src) {
+			if (this != &src) {
+				_arr = NULL;
+				_size = 0;
+				*this = src;
+			}
 		}
 		Array & operator=(Array const &src) {
 			if (this != &src) {

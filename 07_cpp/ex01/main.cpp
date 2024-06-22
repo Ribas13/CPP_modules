@@ -20,7 +20,7 @@ int main() {
 	return 0;
 } */
 
-
+//evaluation test
 class Awesome {
 	public:
 		Awesome( void ) : _n(42) { return ;}
