@@ -9,9 +9,11 @@
 template <typename T>
 class MutantStack : public std::stack<T> {
 	public:
-		MutantStack() : std::stack<T>() {};
-		MutantStack(const MutantStack & src) : std::stack<T>(src) {};
-		virtual ~MutantStack() {};
+		MutantStack() {};
+		MutantStack(const MutantStack & src) {
+			*this = src;
+		};
+		~MutantStack() {};
 		MutantStack &operator=(const MutantStack & src) {
 			if (this != &src)
 				std::stack<T>::operator=(src);
@@ -22,16 +24,16 @@ class MutantStack : public std::stack<T> {
 		typedef typename std::stack<T>::container_type::const_iterator const_iterator;
 
 		iterator begin() {
-			return std::stack<T>::c.begin();
+			return this->c.begin();
 		};
 		iterator end() {
-			return std::stack<T>::c.end();
+			return this->c.end();
 		};
 		const_iterator begin() const {
-			return std::stack<T>::c.begin();
+			return this->c.begin();
 		};
 		const_iterator end() const {
-			return std::stack<T>::c.end();
+			return this->c.end();
 		};
 };
 
